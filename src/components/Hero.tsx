@@ -33,7 +33,7 @@ const Hero = () => {
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold">
             <span className="block text-foreground">Hi, I'm</span>
-            <span className="block gradient-text">[Your Name]</span>
+            <span className="block gradient-text">Arun Anbu</span>
             <span className="block text-2xl sm:text-3xl lg:text-4xl font-normal text-muted-foreground mt-4">
               Robotics Engineer & Tech Explorer
             </span>
@@ -52,7 +52,7 @@ const Hero = () => {
               variant="neon"
               size="lg"
               onClick={scrollToProjects}
-              className="text-lg px-8 py-4 float"
+              className="text-lg px-8 py-4"
             >
               View My Work
             </Button>
