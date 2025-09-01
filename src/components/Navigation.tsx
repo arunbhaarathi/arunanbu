@@ -50,7 +50,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold gradient-text">[Your Name]</span>
+            <span className="text-xl font-bold gradient-text">Arun Anbu</span>
           </div>
 
           {/* Desktop Navigation */}
