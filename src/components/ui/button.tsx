@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -18,6 +18,12 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Neon tech variants
+        neon: "bg-neon-blue text-cyber-dark hover:bg-neon-blue/90 glow-blue hover:scale-105 font-semibold",
+        "neon-outline": "border-2 border-neon-blue text-neon-blue bg-transparent hover:bg-neon-blue hover:text-cyber-dark neon-border hover:scale-105",
+        "neon-green": "bg-neon-green text-cyber-dark hover:bg-neon-green/90 glow-green hover:scale-105 font-semibold",
+        "neon-purple": "bg-neon-purple text-foreground hover:bg-neon-purple/90 glow-purple hover:scale-105 font-semibold",
+        cyber: "bg-cyber-light text-foreground border border-neon-blue/50 hover:border-neon-blue hover:bg-cyber-light/80 hover:glow-blue",
       },
       size: {
         default: "h-10 px-4 py-2",

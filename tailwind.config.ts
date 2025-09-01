@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +64,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Tech theme colors
+				'neon-blue': 'hsl(var(--neon-blue))',
+				'neon-green': 'hsl(var(--neon-green))',
+				'neon-purple': 'hsl(var(--neon-purple))',
+				'cyber-dark': 'hsl(var(--cyber-dark))',
+				'cyber-darker': 'hsl(var(--cyber-darker))',
+				'cyber-light': 'hsl(var(--cyber-light))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
