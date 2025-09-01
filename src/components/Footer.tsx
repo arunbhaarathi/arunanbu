@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold gradient-text mb-2">[Your Name]</h3>
+            <h3 className="text-2xl font-bold gradient-text mb-2">Arun Anbu</h3>
             <p className="text-muted-foreground">
               Robotics Engineer & Tech Explorer
             </p>
@@ -81,7 +81,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-muted-foreground">
-            © {currentYear} [Your Name]. All Rights Reserved.
+            © {currentYear} Arun Anbu. All Rights Reserved.
           </p>
           <div className="mt-2 w-32 h-1 bg-gradient-to-r from-neon-blue to-neon-green mx-auto opacity-50" />
         </div>
