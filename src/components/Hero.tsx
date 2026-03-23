@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import arunPhoto from '@/assets/arun-photo.jpeg';
 
-const roles = ['Robotics Engineer', 'Content Creator', 'Tech Explorer'];
+const roles = ['Robotics Engineer', 'Content Creator', 'Innovator'];
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
