@@ -10,7 +10,7 @@ const Hero = () => {
   const roleIndex = useRef(0);
   const charIndex = useRef(0);
   const isDeleting = useRef(false);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
   const tick = useCallback(() => {
     const currentRole = roles[roleIndex.current];
