@@ -12,26 +12,27 @@ const About = () => {
         </div>
 
         <div className="space-y-4 text-base sm:text-lg leading-relaxed text-muted-foreground text-center">
-          <p>
-            I like building things that move, think, and occasionally surprise me.
+          <p className="text-foreground font-medium italic">
+            Robotics engineer by day, innovator and builder by instinct.
           </p>
 
           <p>
-            I'm <span className="text-foreground font-semibold">Arun</span> — a robotics engineer, technologist, and someone who enjoys turning complex ideas into real, working systems. My work sits at the intersection of{' '}
+            I work at the intersection of{' '}
             <span className="text-primary font-semibold">robotics</span> and{' '}
-            <span className="text-primary font-semibold">AI</span>, where machines learn to see, decide, and act.
+            <span className="text-primary font-semibold">AI</span>, driven by curiosity and grounded in engineering. My focus is on building systems that perform beyond the lab, in real-world conditions where reliability matters.
           </p>
 
           <p>
-            I'm naturally drawn to problems — especially the ones that don't have clear answers. That curiosity has me constantly building, experimenting, failing, and rebuilding. The content I create is just an extension of that process: breaking down complex ideas into something people can actually understand (and enjoy).
+            For me, it is not just about solving problems, but understanding them deeply and turning that insight into practical, scalable solutions.
           </p>
 
           <p>
-            I'm interested in where robotics is going next — more autonomy, smarter systems, and real-world impact.
+            Alongside this, I create content that makes robotics and AI more accessible, with over{' '}
+            <span className="text-foreground font-semibold">1M+ views</span> across platforms.
           </p>
 
           <p className="text-foreground font-medium italic">
-            If it moves, learns, or challenges assumptions, I'm probably already working on it.
+            Curious by nature. Engineer by discipline. Innovator by choice. Thinking ahead to what comes next.
           </p>
         </div>
       </div>
