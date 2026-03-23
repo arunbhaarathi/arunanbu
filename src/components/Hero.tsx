@@ -44,7 +44,7 @@ const Hero = () => {
       <div className="absolute inset-0 cyber-grid opacity-10" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-center">
           {/* Left - Text */}
           <div className="space-y-6">
             <p className="text-muted-foreground text-lg">Hi I am</p>
@@ -83,7 +83,7 @@ const Hero = () => {
           </div>
 
           {/* Right - Photo + Social */}
-          <div className="hidden lg:flex justify-end items-center gap-6">
+          <div className="hidden md:flex justify-end items-center gap-6">
             <div className="relative">
               <div className="w-64 h-64 xl:w-80 xl:h-80 rounded-full bg-muted/50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
               <div className="w-64 h-64 xl:w-80 xl:h-80 rounded-full border-2 border-primary/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-110" />
