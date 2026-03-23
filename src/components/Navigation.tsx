@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Mail } from 'lucide-react';
+import arunPhoto from '@/assets/arun-photo.jpeg';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +10,8 @@ const Navigation = () => {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
+    { id: 'projects', label: 'Portfolio' },
     { id: 'education', label: 'Education' },
-    { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -23,7 +24,6 @@ const Navigation = () => {
         if (section) {
           const offsetTop = section.offsetTop;
           const offsetHeight = section.offsetHeight;
-          
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section.id);
             break;
@@ -45,76 +45,66 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-cyber-dark/80 backdrop-blur-lg border-b border-neon-blue/20 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <span className="text-xl font-bold gradient-text">Arun Anbu</span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 text-sm font-medium transition-all duration-300 ${
-                    activeSection === item.id
-                      ? 'text-neon-blue underline-glow'
-                      : 'text-muted-foreground hover:text-neon-blue'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Resume Button */}
-          <div className="hidden md:block">
-            <Button variant="neon-outline" size="sm">
-              Resume
-            </Button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-auto">
+      {/* Desktop Navigation - Centered pill */}
+      <div className="hidden md:flex items-center gap-1 bg-card/90 backdrop-blur-lg border border-border rounded-full px-2 py-1.5 shadow-lg">
+        {/* Avatar */}
+        <div className="w-8 h-8 rounded-full overflow-hidden border border-border mr-1">
+          <img src={arunPhoto} alt="Arun" className="w-full h-full object-cover" />
         </div>
+
+        {navItems.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => scrollToSection(item.id)}
+            className={`px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-300 ${
+              activeSection === item.id
+                ? 'text-primary'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            {item.label}
+          </button>
+        ))}
+
+        <Button
+          variant="neon"
+          size="sm"
+          className="rounded-full ml-1 gap-1.5"
+          onClick={() => scrollToSection('contact')}
+        >
+          <Mail className="h-4 w-4" />
+          Email
+        </Button>
       </div>
 
       {/* Mobile Navigation */}
+      <div className="md:hidden flex items-center gap-2 bg-card/90 backdrop-blur-lg border border-border rounded-full px-3 py-1.5 shadow-lg">
+        <div className="w-8 h-8 rounded-full overflow-hidden border border-border">
+          <img src={arunPhoto} alt="Arun" className="w-full h-full object-cover" />
+        </div>
+        <span className="text-sm font-semibold text-foreground">Arun Anbu</span>
+        <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </Button>
+      </div>
+
+      {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-cyber-dark/95 backdrop-blur-lg border-t border-neon-blue/20">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`block px-3 py-2 text-base font-medium w-full text-left transition-all duration-300 ${
-                  activeSection === item.id
-                    ? 'text-neon-blue bg-cyber-light'
-                    : 'text-muted-foreground hover:text-neon-blue hover:bg-cyber-light/50'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-            <div className="px-3 py-2">
-              <Button variant="neon-outline" size="sm" className="w-full">
-                Resume
-              </Button>
-            </div>
-          </div>
+        <div className="md:hidden mt-2 bg-card/95 backdrop-blur-lg border border-border rounded-2xl p-2 shadow-lg">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`block w-full text-left px-4 py-2.5 text-sm font-medium rounded-xl transition-all ${
+                activeSection === item.id
+                  ? 'text-primary bg-primary/10'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
       )}
     </nav>
