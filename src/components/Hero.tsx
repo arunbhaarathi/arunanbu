@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import arunPhoto from '@/assets/arun-photo.jpeg';
+import arunPhoto from '@/assets/arun-photo-nobg.png';
 
 const roles = ['Robotics Engineer', 'Content Creator', 'Tech Explorer'];
 
@@ -59,11 +59,12 @@ const Hero = () => {
 
           {/* Center - Photo */}
           <div className="relative flex-shrink-0">
-            <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-muted/50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-            <img
-              src={arunPhoto}
-              alt="Arun Anbu"
-              className="relative z-10 w-56 h-64 sm:w-64 sm:h-72 object-cover object-top rounded-2xl grayscale hover:grayscale-0 transition-all duration-700" />
+            <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-full border-2 border-primary/30 overflow-hidden bg-muted/20">
+              <img
+                src={arunPhoto}
+                alt="Arun Anbu"
+                className="w-full h-full object-cover object-top scale-110 grayscale hover:grayscale-0 transition-all duration-700" />
+            </div>
           </div>
 
           {/* Right - Social icons */}
