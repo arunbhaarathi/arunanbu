@@ -90,6 +90,15 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Scroll down arrow */}
+      <button
+        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-muted-foreground hover:text-primary transition-colors duration-300 animate-bounce"
+        aria-label="Scroll down"
+      >
+        <ChevronDown className="h-8 w-8" />
+      </button>
     </section>
   );
 };
