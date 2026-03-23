@@ -38,13 +38,13 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center overflow-hidden">
       {/* Subtle background */}
       <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 cyber-grid opacity-10" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
           {/* Left - Text */}
           <div className="space-y-6">
             <p className="text-muted-foreground text-lg">Hi I am</p>
