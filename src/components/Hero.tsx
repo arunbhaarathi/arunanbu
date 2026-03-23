@@ -83,14 +83,14 @@ const Hero = () => {
           </div>
 
           {/* Right - Photo + Social */}
-          <div className="flex justify-center lg:justify-end items-center gap-6">
+          <div className="hidden lg:flex justify-end items-center gap-6">
             <div className="relative">
-              <div className="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-muted/50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-              <div className="w-72 h-72 sm:w-96 sm:h-96 rounded-full border-2 border-primary/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-110" />
+              <div className="w-64 h-64 xl:w-80 xl:h-80 rounded-full bg-muted/50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+              <div className="w-64 h-64 xl:w-80 xl:h-80 rounded-full border-2 border-primary/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-110" />
               <img
                 src={arunPhoto}
                 alt="Arun Anbu"
-                className="relative z-10 w-72 h-80 sm:w-80 sm:h-[28rem] object-cover object-top rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                className="relative z-10 w-64 h-72 xl:w-72 xl:h-96 object-cover object-top rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
 
