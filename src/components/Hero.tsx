@@ -57,27 +57,24 @@ const Hero = () => {
             </h2>
           </div>
 
-          {/* Center - Photo with blob shape */}
+          {/* Center - Photo with tall rounded shape */}
           <div className="relative flex-shrink-0">
-            <svg viewBox="0 0 300 300" className="absolute inset-0 w-56 h-56 sm:w-64 sm:h-64 -z-10 translate-x-3 translate-y-3">
+            <svg viewBox="0 0 220 300" className="absolute inset-0 w-48 h-[17rem] sm:w-56 sm:h-[20rem] -z-10 translate-x-3 translate-y-3">
               <path
-                d="M150,20 C220,20 280,80 280,150 C280,220 220,280 150,280 C80,280 20,220 20,150 C20,80 80,20 150,20"
-                className="fill-primary/30"
-                style={{
-                  borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
-                }}
+                d="M110,10 C180,10 210,60 210,110 L210,200 C210,260 170,290 110,290 C50,290 10,260 10,200 L10,110 C10,60 40,10 110,10Z"
+                className="fill-primary/20"
               />
             </svg>
             <div
-              className="w-56 h-56 sm:w-64 sm:h-64 overflow-hidden"
+              className="w-48 h-[17rem] sm:w-56 sm:h-[20rem] overflow-hidden"
               style={{
-                borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+                borderRadius: '45% 45% 42% 42% / 30% 30% 25% 25%',
               }}
             >
               <img
                 src={arunPhoto}
                 alt="Arun Anbu"
-                className="w-full h-full object-cover object-top scale-110 grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
           </div>
