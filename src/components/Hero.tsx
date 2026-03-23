@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import arunPhoto from '@/assets/arun-photo.jpeg';
@@ -6,28 +6,43 @@ import arunPhoto from '@/assets/arun-photo.jpeg';
 const roles = ['Robotics Engineer', 'Content Creator', 'Innovator'];
 
 const Hero = () => {
-  const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
+  const roleIndex = useRef(0);
+  const charIndex = useRef(0);
+  const isDeleting = useRef(false);
+  const timeoutRef = useRef<NodeJS.Timeout>();
+
+  const tick = useCallback(() => {
+    const currentRole = roles[roleIndex.current];
+
+    if (!isDeleting.current) {
+      charIndex.current++;
+      setDisplayText(currentRole.slice(0, charIndex.current));
+
+      if (charIndex.current === currentRole.length) {
+        isDeleting.current = true;
+        timeoutRef.current = setTimeout(tick, 1500);
+        return;
+      }
+      timeoutRef.current = setTimeout(tick, 100);
+    } else {
+      charIndex.current--;
+      setDisplayText(currentRole.slice(0, charIndex.current));
+
+      if (charIndex.current === 0) {
+        isDeleting.current = false;
+        roleIndex.current = (roleIndex.current + 1) % roles.length;
+        timeoutRef.current = setTimeout(tick, 300);
+        return;
+      }
+      timeoutRef.current = setTimeout(tick, 50);
+    }
+  }, []);
 
   useEffect(() => {
-    const role = roles[currentRole];
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        setDisplayText(role.slice(0, displayText.length + 1));
-        if (displayText.length === role.length) {
-          setTimeout(() => setIsDeleting(true), 1500);
-        }
-      } else {
-        setDisplayText(role.slice(0, displayText.length - 1));
-        if (displayText.length === 0) {
-          setIsDeleting(false);
-          setCurrentRole((prev) => (prev + 1) % roles.length);
-        }
-      }
-    }, isDeleting ? 50 : 100);
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentRole]);
+    timeoutRef.current = setTimeout(tick, 100);
+    return () => clearTimeout(timeoutRef.current);
+  }, [tick]);
 
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
