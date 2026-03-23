@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Instagram } from 'lucide-react';
 import arunPhoto from '@/assets/arun-photo.jpeg';
 
 const roles = ['Robotics Engineer', 'Content Creator', 'Innovator'];
@@ -92,7 +92,7 @@ const Hero = () => {
             {[
               { icon: Github, href: '#' },
               { icon: Linkedin, href: '#' },
-              { icon: Mail, href: 'mailto:your.email@example.com' },
+              { icon: Instagram, href: '#' },
             ].map(({ icon: Icon, href }, i) => (
               <a
                 key={i}
