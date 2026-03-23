@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import arunPhoto from '@/assets/arun-photo.jpeg';
+import arunPhoto from '@/assets/arun-photo-nobg.png';
 
 const roles = ['Robotics Engineer', 'Content Creator', 'Tech Explorer'];
 
