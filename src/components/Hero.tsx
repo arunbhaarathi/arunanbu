@@ -57,20 +57,24 @@ const Hero = () => {
             </h2>
           </div>
 
-          {/* Center - Photo with tall rounded shape */}
+          {/* Center - Photo with curvy geometric shape */}
           <div className="relative flex-shrink-0">
-            <svg viewBox="0 0 220 300" className="absolute inset-0 w-48 h-[17rem] sm:w-56 sm:h-[20rem] -z-10 translate-x-3 translate-y-3">
+            <svg viewBox="0 0 280 320" className="absolute inset-0 w-52 h-60 sm:w-60 sm:h-[17rem] -z-10 translate-x-3 translate-y-3">
               <path
-                d="M110,10 C180,10 210,60 210,110 L210,200 C210,260 170,290 110,290 C50,290 10,260 10,200 L10,110 C10,60 40,10 110,10Z"
+                d="M140,8 C200,8 250,40 260,100 C270,160 255,220 240,260 C225,300 180,312 140,312 C100,312 55,300 40,260 C25,220 10,160 20,100 C30,40 80,8 140,8Z"
                 className="fill-primary/20"
               />
             </svg>
-            <div
-              className="w-48 h-[17rem] sm:w-56 sm:h-[20rem] overflow-hidden"
-              style={{
-                borderRadius: '45% 45% 42% 42% / 30% 30% 25% 25%',
-              }}
-            >
+            <div className="w-52 h-60 sm:w-60 sm:h-[17rem] overflow-hidden" style={{
+              clipPath: 'url(#curvy-geo)',
+            }}>
+              <svg width="0" height="0" className="absolute">
+                <defs>
+                  <clipPath id="curvy-geo" clipPathUnits="objectBoundingBox">
+                    <path d="M0.5,0.02 C0.78,0.02 0.95,0.12 0.97,0.3 C0.99,0.5 0.92,0.7 0.86,0.82 C0.8,0.94 0.65,0.98 0.5,0.98 C0.35,0.98 0.2,0.94 0.14,0.82 C0.08,0.7 0.01,0.5 0.03,0.3 C0.05,0.12 0.22,0.02 0.5,0.02Z" />
+                  </clipPath>
+                </defs>
+              </svg>
               <img
                 src={arunPhoto}
                 alt="Arun Anbu"
