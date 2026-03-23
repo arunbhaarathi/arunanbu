@@ -56,30 +56,6 @@ const Hero = () => {
               <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
             </h2>
 
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Button variant="neon" size="lg" onClick={scrollToContact} className="text-base px-8">
-                Hire Me
-              </Button>
-              <Button variant="neon-outline" size="lg" className="text-base px-8">
-                Download CV
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="flex gap-8 pt-6 border-t border-border mt-6">
-              {[
-                { value: '5+', label: 'Experiences' },
-                { value: '20+', label: 'Projects done' },
-                { value: '10+', label: 'Technologies' },
-              ].map((stat, i) => (
-                <div key={i}>
-                  <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right - Photo + Social */}
