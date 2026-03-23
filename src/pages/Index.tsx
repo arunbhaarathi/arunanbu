@@ -8,14 +8,14 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-cyber-dark">
+    <div className="h-screen overflow-y-auto snap-y snap-mandatory">
       <Navigation />
-      <Hero />
-      <About />
-      <Education />
-      <Projects />
-      <Contact />
-      <Footer />
+      <div className="snap-start min-h-screen"><Hero /></div>
+      <div className="snap-start min-h-screen"><About /></div>
+      <div className="snap-start min-h-screen"><Education /></div>
+      <div className="snap-start min-h-screen"><Projects /></div>
+      <div className="snap-start min-h-screen"><Contact /></div>
+      <div className="snap-start"><Footer /></div>
     </div>
   );
 };
