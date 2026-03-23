@@ -59,19 +59,13 @@ const Hero = () => {
 
           {/* Center - Photo with asymmetric blob */}
           <div className="relative flex-shrink-0">
-            <svg viewBox="0 0 300 340" className="absolute inset-0 w-52 h-60 sm:w-60 sm:h-[17rem] -z-10 translate-x-3 translate-y-3">
-              <path
-                d="M220,30 C280,70 290,150 270,220 C250,290 190,330 130,320 C70,310 10,270 5,200 C0,130 30,60 80,30 C130,0 160,-10 220,30Z"
-                className="fill-primary/20"
-              />
-            </svg>
-            <div className="w-52 h-60 sm:w-60 sm:h-[17rem] overflow-hidden" style={{
+            <div className="w-56 h-64 sm:w-64 sm:h-[19rem] overflow-hidden" style={{
               borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
             }}>
               <img
                 src={arunPhoto}
                 alt="Arun Anbu"
-                className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover object-[center_15%] grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
           </div>
