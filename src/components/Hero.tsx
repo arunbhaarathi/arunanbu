@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
 import arunPhoto from '@/assets/arun-photo.jpeg';
 
 const roles = ['Robotics Engineer', 'Content Creator', 'Tech Explorer'];
@@ -56,30 +55,6 @@ const Hero = () => {
               <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
             </h2>
 
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Button variant="neon" size="lg" onClick={scrollToContact} className="text-base px-8">
-                Hire Me
-              </Button>
-              <Button variant="neon-outline" size="lg" className="text-base px-8">
-                Download CV
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="flex gap-8 pt-6 border-t border-border mt-6">
-              {[
-                { value: '5+', label: 'Experiences' },
-                { value: '20+', label: 'Projects done' },
-                { value: '10+', label: 'Technologies' },
-              ].map((stat, i) => (
-                <div key={i}>
-                  <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right - Photo + Social */}
@@ -115,6 +90,15 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Scroll down arrow */}
+      <button
+        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-muted-foreground hover:text-primary transition-colors duration-300 animate-bounce"
+        aria-label="Scroll down"
+      >
+        <ChevronDown className="h-8 w-8" />
+      </button>
     </section>
   );
 };
