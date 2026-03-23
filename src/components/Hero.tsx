@@ -62,11 +62,11 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
           {/* Left - Text */}
           <div className="space-y-2 text-center md:text-left">
-            <p className="text-primary font-medium mb-1">Hi, I am</p>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
+            <p className="text-primary font-poppins font-medium mb-1">Hi, I am</p>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-poppins font-bold text-foreground leading-tight">
               Arun Anbu
             </h1>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-2">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold mt-2">
               <span className="gradient-text">{displayText}</span>
               <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
             </h2>
