@@ -62,7 +62,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
           {/* Left - Text */}
           <div className="space-y-2 text-center md:text-left">
-            <p className="text-primary font-medium tracking-wider uppercase mb-1">Hi, I am</p>
+            <p className="text-primary font-medium mb-1">Hi, I am</p>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
               Arun Anbu
             </h1>
