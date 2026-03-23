@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import arunPhoto from '@/assets/arun-photo-nobg.png';
+import arunPhoto from '@/assets/arun-photo.jpeg';
 
 const roles = ['Robotics Engineer', 'Content Creator', 'Tech Explorer'];
 
@@ -57,13 +57,28 @@ const Hero = () => {
             </h2>
           </div>
 
-          {/* Center - Photo */}
+          {/* Center - Photo with blob shape */}
           <div className="relative flex-shrink-0">
-            <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-full border-2 border-primary/30 overflow-hidden bg-muted/20">
+            <svg viewBox="0 0 300 300" className="absolute inset-0 w-56 h-56 sm:w-64 sm:h-64 -z-10 translate-x-3 translate-y-3">
+              <path
+                d="M150,20 C220,20 280,80 280,150 C280,220 220,280 150,280 C80,280 20,220 20,150 C20,80 80,20 150,20"
+                className="fill-primary/30"
+                style={{
+                  borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+                }}
+              />
+            </svg>
+            <div
+              className="w-56 h-56 sm:w-64 sm:h-64 overflow-hidden"
+              style={{
+                borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+              }}
+            >
               <img
                 src={arunPhoto}
                 alt="Arun Anbu"
-                className="w-full h-full object-cover object-top scale-110 grayscale hover:grayscale-0 transition-all duration-700" />
+                className="w-full h-full object-cover object-top scale-110 grayscale hover:grayscale-0 transition-all duration-700"
+              />
             </div>
           </div>
 
