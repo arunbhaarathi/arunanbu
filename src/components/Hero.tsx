@@ -83,7 +83,7 @@ const Hero = () => {
           </div>
 
           {/* Right - Photo + Social */}
-          <div className="hidden lg:flex justify-end items-center gap-6">
+          <div className="hidden md:flex justify-end items-center gap-6">
             <div className="relative">
               <div className="w-64 h-64 xl:w-80 xl:h-80 rounded-full bg-muted/50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
               <div className="w-64 h-64 xl:w-80 xl:h-80 rounded-full border-2 border-primary/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-110" />
