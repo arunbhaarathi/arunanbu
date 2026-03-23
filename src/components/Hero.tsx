@@ -56,22 +56,6 @@ const Hero = () => {
               <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
             </h2>
 
-            {/* Social icons */}
-            <div className="flex gap-3 pt-2">
-              {[
-                { icon: Github, href: '#' },
-                { icon: Linkedin, href: '#' },
-                { icon: Mail, href: 'mailto:your.email@example.com' },
-              ].map(({ icon: Icon, href }, i) => (
-                <a
-                  key={i}
-                  href={href}
-                  className="p-2.5 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
