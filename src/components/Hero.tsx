@@ -92,7 +92,7 @@ const Hero = () => {
             {[
               { icon: Github, href: '#' },
               { icon: Linkedin, href: '#' },
-              { icon: Mail, href: 'mailto:your.email@example.com' },
+              { icon: Instagram, href: '#' },
             ].map(({ icon: Icon, href }, i) => (
               <a
                 key={i}
