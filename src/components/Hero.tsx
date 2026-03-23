@@ -47,7 +47,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Text */}
           <div className="space-y-6 text-2xl text-center mx-0">
-            <p className="text-muted-foreground text-9xl text-center">Arun </p>
+            <p className="text-primary font-medium tracking-wider uppercase">Hi, I am</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               Arun Anbu
             </h1>
