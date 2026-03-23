@@ -66,9 +66,12 @@ const Hero = () => {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-poppins font-bold text-foreground leading-tight">
               Arun Anbu
             </h1>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold mt-2">
-              <span className="gradient-text">{displayText}</span>
-              <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold mt-2 relative">
+              <span className="invisible">Robotics Engineer</span>
+              <span className="absolute left-0 top-0 w-full text-center md:text-left">
+                <span className="gradient-text">{displayText}</span>
+                <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
+              </span>
             </h2>
           </div>
 
