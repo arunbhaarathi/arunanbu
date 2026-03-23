@@ -90,9 +90,9 @@ const Hero = () => {
           <div className="flex md:flex-col gap-3 items-center">
             <span className="text-sm text-muted-foreground font-medium mb-1 hidden md:block">Social</span>
             {[
-              { icon: Github, href: '#' },
-              { icon: Linkedin, href: '#' },
-              { icon: Instagram, href: '#' },
+              { icon: Github, href: 'https://github.com/arunbhaarathi' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/arunbhaarathianbu/' },
+              { icon: Instagram, href: 'https://www.instagram.com/arunbhaarathi/' },
             ].map(({ icon: Icon, href }, i) => (
               <a
                 key={i}
