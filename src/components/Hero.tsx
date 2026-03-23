@@ -38,13 +38,13 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center overflow-hidden">
       {/* Subtle background */}
       <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 cyber-grid opacity-10" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
           {/* Left - Text */}
           <div className="space-y-6">
             <p className="text-muted-foreground text-lg">Hi I am</p>
@@ -83,14 +83,14 @@ const Hero = () => {
           </div>
 
           {/* Right - Photo + Social */}
-          <div className="flex justify-center lg:justify-end items-center gap-6">
+          <div className="hidden lg:flex justify-end items-center gap-6">
             <div className="relative">
-              <div className="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-muted/50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-              <div className="w-72 h-72 sm:w-96 sm:h-96 rounded-full border-2 border-primary/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-110" />
+              <div className="w-64 h-64 xl:w-80 xl:h-80 rounded-full bg-muted/50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+              <div className="w-64 h-64 xl:w-80 xl:h-80 rounded-full border-2 border-primary/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-110" />
               <img
                 src={arunPhoto}
                 alt="Arun Anbu"
-                className="relative z-10 w-72 h-80 sm:w-80 sm:h-[28rem] object-cover object-top rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                className="relative z-10 w-64 h-72 xl:w-72 xl:h-96 object-cover object-top rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
 
