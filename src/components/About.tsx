@@ -1,17 +1,17 @@
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-cyber-dark relative">
+    <section id="about" className="h-screen flex items-center relative bg-cyber-dark overflow-hidden">
       <div className="absolute inset-0 cyber-grid opacity-5" />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-poppins font-bold mb-4">
+      <div className="max-w-3xl mx-auto px-6 sm:px-8">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl sm:text-4xl font-poppins font-bold mb-3">
             <span className="underline-glow gradient-text">About Me</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-neon-blue to-neon-green mx-auto glow-blue" />
+          <div className="w-20 h-1 bg-gradient-to-r from-neon-blue to-neon-green mx-auto glow-blue" />
         </div>
 
-        <div className="space-y-6 text-lg leading-relaxed text-muted-foreground text-center">
+        <div className="space-y-4 text-base sm:text-lg leading-relaxed text-muted-foreground text-center">
           <p>
             I like building things that move, think, and occasionally surprise me.
           </p>
