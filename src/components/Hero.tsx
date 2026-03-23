@@ -55,31 +55,33 @@ const Hero = () => {
               <span className="gradient-text">{displayText}</span>
               <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
             </h2>
-
-            {/* Social icons */}
-            <div className="flex gap-3 pt-4 justify-center md:justify-start">
-              {[
-              { icon: Github, href: '#' },
-              { icon: Linkedin, href: '#' },
-              { icon: Mail, href: 'mailto:your.email@example.com' }].
-              map(({ icon: Icon, href }, i) =>
-              <a
-                key={i}
-                href={href}
-                className="p-2.5 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300">
-                  <Icon className="h-5 w-5" />
-                </a>
-              )}
-            </div>
           </div>
 
-          {/* Right - Photo */}
+          {/* Center - Photo */}
           <div className="relative flex-shrink-0">
             <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-muted/50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
             <img
               src={arunPhoto}
               alt="Arun Anbu"
               className="relative z-10 w-56 h-64 sm:w-64 sm:h-72 object-cover object-top rounded-2xl grayscale hover:grayscale-0 transition-all duration-700" />
+          </div>
+
+          {/* Right - Social icons */}
+          <div className="flex md:flex-col gap-3 items-center">
+            <span className="text-sm text-muted-foreground font-medium mb-1 hidden md:block">Social</span>
+            {[
+              { icon: Github, href: '#' },
+              { icon: Linkedin, href: '#' },
+              { icon: Mail, href: 'mailto:your.email@example.com' },
+            ].map(({ icon: Icon, href }, i) => (
+              <a
+                key={i}
+                href={href}
+                className="p-2.5 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+              >
+                <Icon className="h-5 w-5" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
