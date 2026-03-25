@@ -81,7 +81,7 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 bg-cyber-dark relative">
+    <section id="projects" className="py-20 bg-cyber-dark relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 particles opacity-30" />
       <div className="absolute inset-0 cyber-grid opacity-5" />
