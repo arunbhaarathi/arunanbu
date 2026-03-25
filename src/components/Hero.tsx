@@ -77,7 +77,7 @@ const Hero = () => {
 
           {/* Center - Photo with asymmetric blob */}
           <div className="relative flex-shrink-0">
-            <div className="w-56 h-64 sm:w-64 sm:h-[19rem] overflow-hidden" style={{ borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }}>
+            <div className="w-72 h-80 sm:w-80 sm:h-[24rem] overflow-hidden" style={{ borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }}>
               <img
                 src={arunPhoto}
                 alt="Arun Anbu"
