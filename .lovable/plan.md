@@ -1,28 +1,17 @@
 
 
-## Fix: Typewriter animation causing layout shifts
+## Analysis
 
-**Root cause**: The `h2` containing the typewriter text has no fixed width. As the text grows/shrinks, it changes the element's width, which shifts the entire flex layout and causes the scrollbar to fluctuate.
+The current Hero uses a three-column flex layout (`text | photo | social`) constrained to `max-w-5xl` (64rem). On your 883px viewport, this creates visible gutters on both sides. The social column also pushes the photo away from the text, fragmenting the visual weight.
 
-### Changes
+## Proposed Changes
 
-**`src/components/Hero.tsx`** — Reserve space for the longest role text so the layout never shifts:
-- Add a hidden `span` that renders the longest role ("Robotics Engineer") with `visibility: hidden` and `h-0 overflow-hidden block` to reserve the width
-- Or simpler: set a `min-w` / fixed `min-height` on the `h2` element
-- Best approach: render an invisible copy of the longest string to hold the width, with the visible typewriter text positioned over it using `absolute` positioning
+**File: `src/components/Hero.tsx`**
 
-Specifically:
-```tsx
-<h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold mt-2 relative">
-  {/* Invisible spacer for the longest role */}
-  <span className="invisible">Robotics Engineer</span>
-  {/* Visible typewriter text overlaid */}
-  <span className="absolute left-0 top-0 md:left-0 text-center md:text-left w-full">
-    <span className="gradient-text">{displayText}</span>
-    <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
-  </span>
-</h2>
-```
+1. Widen the container from `max-w-5xl` to `max-w-6xl` to better fill the viewport
+2. Increase horizontal padding slightly and adjust the gap between columns
+3. Give the text column more flex weight (`flex-1`) so it naturally fills available space
+4. Keep the social icons column compact but closer to the photo
 
-This reserves the exact space needed for the widest role, preventing any layout shift.
+This is a lightweight spacing adjustment — no structural or content changes.
 
