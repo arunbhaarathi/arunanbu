@@ -58,13 +58,13 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 cyber-grid opacity-10" />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-8 sm:px-12">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12">
           {/* Left - Text */}
-          <div className="flex-1 space-y-2 text-center md:text-left">
-            <p className="text-primary font-poppins font-medium mb-1">Hi, I am</p>
+          <div className="space-y-2 text-center md:text-left">
+            <p className="text-primary font-poppins font-medium mb-1">Hi there!   </p>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-poppins font-bold text-foreground leading-tight">
-              Arun Anbu
+              ​I am Arun   
             </h1>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold mt-2 relative">
               <span className="invisible">Robotics Engineer</span>
@@ -81,8 +81,8 @@ const Hero = () => {
               <img
                 src={arunPhoto}
                 alt="Arun Anbu"
-                className="w-full h-full object-cover object-[center_15%]"
-              />
+                className="w-full h-full object-cover object-[center_15%]" />
+              
             </div>
           </div>
 
@@ -90,30 +90,23 @@ const Hero = () => {
           <div className="flex md:flex-col gap-3 items-center">
             <span className="text-sm text-muted-foreground font-medium mb-1 hidden md:block">Social</span>
             {[
-              { icon: Github, href: 'https://github.com/arunbhaarathi' },
-              { icon: Linkedin, href: 'https://www.linkedin.com/in/arunbhaarathianbu/' },
-              { icon: Instagram, href: 'https://www.instagram.com/arunbhaarathi/' },
-            ].map(({ icon: Icon, href }, i) => (
-              <a
-                key={i}
-                href={href}
-                className="p-2.5 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-              >
+            { icon: Github, href: 'https://github.com/arunbhaarathi' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/arunbhaarathianbu/' },
+            { icon: Instagram, href: 'https://www.instagram.com/arunbhaarathi/' }].
+            map(({ icon: Icon, href }, i) =>
+            <a
+              key={i}
+              href={href}
+              className="p-2.5 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300">
+              
                 <Icon className="h-5 w-5" />
               </a>
-            ))}
+            )}
           </div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-10">
-        <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll</span>
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/40 flex justify-center pt-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-primary animate-[scrollDot_1.5s_ease-in-out_infinite]" />
-        </div>
-      </div>
     </section>);
+
 };
 
 export default Hero;
