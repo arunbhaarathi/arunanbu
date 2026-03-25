@@ -58,10 +58,10 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 cyber-grid opacity-10" />
 
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-10">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-8 sm:px-12">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10">
           {/* Left - Text */}
-          <div className="space-y-2 text-center md:text-left">
+          <div className="flex-1 space-y-2 text-center md:text-left">
             <p className="text-primary font-poppins font-medium mb-1">Hi, I am</p>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-poppins font-bold text-foreground leading-tight">
               Arun Anbu
