@@ -58,13 +58,13 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 cyber-grid opacity-10" />
 
-      <div className="relative z-10 w-full h-full min-h-screen flex flex-col md:flex-row">
-        {/* Left - Text content */}
-        <div className="flex-1 flex flex-col justify-center px-8 sm:px-12 lg:px-20 py-20 md:py-0">
-          <div className="space-y-3 text-center md:text-left max-w-lg">
-            <p className="text-primary font-poppins font-medium mb-1">Hi there!</p>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-poppins font-bold text-foreground leading-tight">
-              I am Arun
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+          {/* Left - Text */}
+          <div className="space-y-2 text-center md:text-left">
+            <p className="text-primary font-poppins font-medium mb-1">Hi there!   </p>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-poppins font-bold text-foreground leading-tight">
+              ​I am Arun   
             </h1>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold mt-2 relative">
               <span className="invisible">Robotics Engineer</span>
@@ -73,34 +73,36 @@ const Hero = () => {
                 <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
               </span>
             </h2>
+          </div>
 
-            {/* Social icons inline */}
-            <div className="flex gap-3 items-center pt-6 justify-center md:justify-start">
-              {[
-                { icon: Github, href: 'https://github.com/arunbhaarathi' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/in/arunbhaarathianbu/' },
-                { icon: Instagram, href: 'https://www.instagram.com/arunbhaarathi/' },
-              ].map(({ icon: Icon, href }, i) => (
-                <a
-                  key={i}
-                  href={href}
-                  className="p-2.5 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
+          {/* Center - Photo with asymmetric blob */}
+          <div className="relative flex-shrink-0">
+            <div className="w-56 h-64 sm:w-64 sm:h-[19rem] overflow-hidden" style={{ borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }}>
+              <img
+                src={arunPhoto}
+                alt="Arun Anbu"
+                className="w-full h-full object-cover object-[center_15%]" />
+              
             </div>
           </div>
-        </div>
 
-        {/* Right - Photo, large and edge-aligned */}
-        <div className="relative w-full md:w-[45%] lg:w-[50%] flex items-end justify-center md:justify-end">
-          <img
-            src={arunPhoto}
-            alt="Arun Anbu"
-            className="w-[70%] md:w-full max-h-[85vh] object-cover object-[center_15%] grayscale"
-            style={{ borderRadius: '20% 20% 0 0' }}
-          />
+          {/* Right - Social icons */}
+          <div className="flex md:flex-col gap-3 items-center">
+            <span className="text-sm text-muted-foreground font-medium mb-1 hidden md:block">Social</span>
+            {[
+            { icon: Github, href: 'https://github.com/arunbhaarathi' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/arunbhaarathianbu/' },
+            { icon: Instagram, href: 'https://www.instagram.com/arunbhaarathi/' }].
+            map(({ icon: Icon, href }, i) =>
+            <a
+              key={i}
+              href={href}
+              className="p-2.5 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300">
+              
+                <Icon className="h-5 w-5" />
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </section>);
