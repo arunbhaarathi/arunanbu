@@ -183,4 +183,9 @@
     from, to { border-color: transparent; }
     50% { border-color: hsl(var(--primary)); }
   }
+
+  @keyframes scrollDot {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(16px); }
+  }
 }
