@@ -13,7 +13,8 @@ const Projects = () => {
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
-    align: 'center',
+    align: 'start',
+    slidesToScroll: 1,
     skipSnaps: false,
   });
 
