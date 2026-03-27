@@ -13,7 +13,8 @@ const Projects = () => {
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
-    align: 'center',
+    align: 'start',
+    slidesToScroll: 1,
     skipSnaps: false,
   });
 
@@ -72,29 +73,28 @@ const Projects = () => {
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="flex-[0_0_100%] min-w-0 px-4 sm:px-8"
+                  className="flex-[0_0_100%] sm:flex-[0_0_33.333%] min-w-0 px-2"
                 >
                   <button
                     onClick={() => openProject(project)}
-                    className="group w-full text-left bg-card border border-border rounded-xl p-8 sm:p-12 transition-all duration-500 hover:border-primary/50 hover:glow-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background cursor-pointer"
+                    className="group w-full text-left aspect-square bg-card border border-border rounded-xl p-6 flex flex-col justify-between transition-all duration-500 hover:border-primary/50 hover:glow-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background cursor-pointer"
                   >
-                    {/* Future image slot */}
                     {project.image && (
-                      <div className="mb-6 rounded-lg overflow-hidden">
+                      <div className="rounded-lg overflow-hidden">
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-48 object-cover"
+                          className="w-full h-24 object-cover"
                         />
                       </div>
                     )}
 
-                    <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground leading-tight group-hover:text-primary transition-colors duration-300">
+                    <h3 className="font-display text-sm sm:text-base lg:text-lg font-semibold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 line-clamp-5">
                       {project.title}
                     </h3>
 
-                    <span className="inline-block mt-6 text-sm text-muted-foreground group-hover:text-primary/70 transition-colors duration-300">
-                      Click to view details →
+                    <span className="text-xs text-muted-foreground group-hover:text-primary/70 transition-colors duration-300">
+                      View details →
                     </span>
                   </button>
                 </div>
