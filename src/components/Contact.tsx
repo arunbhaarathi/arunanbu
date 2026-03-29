@@ -145,11 +145,6 @@ const Contact = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <Mail className="h-5 w-5 text-neon-blue" />
-                    <span className="text-foreground">your.email@example.com</span>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
                     <div className="h-5 w-5 bg-neon-green rounded-full" />
                     <span className="text-foreground">Available for new projects</span>
                   </div>
