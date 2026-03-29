@@ -67,7 +67,7 @@ const Contact = () => {
           {/* Combined Let's Connect + Form */}
           <div className="space-y-8">
             <div className="bg-card border border-border rounded-xl p-8 hover:border-neon-green/50 transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4 text-neon-green">Let's Connect</h3>
+              
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 I'm always interested in discussing new opportunities, innovative projects, 
