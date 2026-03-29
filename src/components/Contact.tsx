@@ -141,6 +141,7 @@ const Contact = () => {
             </div>
           </div>
 
+          <div className="space-y-8">
             {/* Social Links */}
             <div className="bg-card border border-border rounded-xl p-8 hover:border-neon-purple/50 transition-all duration-300">
               <h3 className="text-xl font-bold mb-6 text-neon-purple">Follow Me</h3>
