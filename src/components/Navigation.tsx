@@ -10,8 +10,8 @@ const Navigation = () => {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
-    { id: 'projects', label: 'Portfolio' },
-    { id: 'education', label: 'Education' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'education', label: 'Blog' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -66,16 +66,6 @@ const Navigation = () => {
             {item.label}
           </button>
         ))}
-
-        <Button
-          variant="neon"
-          size="sm"
-          className="rounded-full ml-1 gap-1.5"
-          onClick={() => scrollToSection('contact')}
-        >
-          <Mail className="h-4 w-4" />
-          Email
-        </Button>
       </div>
 
       {/* Mobile Navigation */}
