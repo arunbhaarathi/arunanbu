@@ -64,11 +64,21 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
+          {/* Combined Let's Connect + Form */}
           <div className="space-y-8">
-            <div className="bg-card border border-border rounded-xl p-8 neon-border">
-              <h3 className="text-2xl font-bold mb-6 gradient-text">Send a Message</h3>
+            <div className="bg-card border border-border rounded-xl p-8 hover:border-neon-green/50 transition-all duration-300">
+              <h3 className="text-2xl font-bold mb-4 text-neon-green">Let's Connect</h3>
               
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                I'm always interested in discussing new opportunities, innovative projects, 
+                and collaborations in the field of robotics and AI.
+              </p>
+
+              <div className="flex items-center gap-3 mb-8">
+                <div className="h-5 w-5 bg-neon-green rounded-full" />
+                <span className="text-foreground">Available for new projects</span>
+              </div>
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-foreground">
@@ -131,27 +141,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Info & Social */}
           <div className="space-y-8">
-            {/* Contact Info */}
-            <div className="bg-card border border-border rounded-xl p-8 hover:border-neon-green/50 transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-6 text-neon-green">Let's Connect</h3>
-              
-              <div className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
-                  I'm always interested in discussing new opportunities, innovative projects, 
-                  and collaborations in the field of robotics and AI.
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="h-5 w-5 bg-neon-green rounded-full" />
-                    <span className="text-foreground">Available for new projects</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Social Links */}
             <div className="bg-card border border-border rounded-xl p-8 hover:border-neon-purple/50 transition-all duration-300">
               <h3 className="text-xl font-bold mb-6 text-neon-purple">Follow Me</h3>
